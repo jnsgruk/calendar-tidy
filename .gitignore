@@ -1,0 +1,7 @@
+result*
+/target
+calendar-tidy.yaml
+credentials.json
+token.json
+*.snap
+snapcraft*.txt

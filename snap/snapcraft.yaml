@@ -1,0 +1,40 @@
+name: calendar-tidy
+adopt-info: calendar-tidy
+summary: A command-line utility to bulk delete events from a Google Calendar
+description: |
+  A utility for bulk deleting events from a Google Calendar
+  within a given date range, according to some (optional) filters.
+
+  All day events are not removed, and events for deletion can be
+  filtered using regular expression patterns in the configuration file.
+
+license: Apache-2.0
+contact: https://github.com/jnsgruk/calendar-tidy/issues
+issues: https://github.com/jnsgruk/calendar-tidy/issues
+source-code: https://github.com/jnsgruk/calendar-tidy
+
+base: core24
+confinement: strict
+grade: stable
+compression: lzo
+
+platforms:
+  amd64:
+  arm64:
+
+parts:
+  calendar-tidy:
+    plugin: rust
+    source: .
+    override-prime: |
+      craftctl default
+      bin_version="$($CRAFT_PRIME/bin/calendar-tidy --version | cut -d" " -f2)"
+      craftctl set version="$bin_version"
+
+apps:
+  calendar-tidy:
+    command: bin/calendar-tidy
+    plugs:
+      - home
+      - network
+      - network-bind
