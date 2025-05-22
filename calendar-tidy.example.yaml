@@ -1,0 +1,7 @@
+calendar-id: foo.bar@enterprise.com
+
+ignored-colours: []
+
+ignored-regex:
+  - "^Some Event$"
+  - "^Team Planning - Weekly$"
