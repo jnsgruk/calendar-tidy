@@ -17,7 +17,7 @@ use std::process::exit;
 #[derive(Parser)]
 #[command(version, about, long_about)]
 struct Cli {
-    /// Date to starting clearing from in the format DD/MM/YYYY.
+    /// Date to starting clearing from in the format YYYY/MM/DD.
     #[arg(short, long)]
     start_date: String,
 
@@ -81,7 +81,7 @@ fn render_events_table(events: &[Event]) {
         .iter()
         .map(|e| {
             vec![
-                format!("{}", e.start_time.format("%d/%m/%Y %H:%M")),
+                format!("{}", e.start_time.format("%Y/%m/%d %H:%M")),
                 e.name.clone(),
             ]
         })

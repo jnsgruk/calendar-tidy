@@ -89,7 +89,7 @@ impl CalendarClient for GoogleCalendarClient {
     /// events returns the events for the specified day.
     async fn events(&self) -> Result<Vec<Event>> {
         // Compute the start time for the specified day.
-        let date = NaiveDate::parse_from_str(&self.config.start_date, "%d/%m/%Y")?;
+        let date = NaiveDate::parse_from_str(&self.config.start_date, "%Y/%m/%d")?;
 
         let time_min = DateTime::<Utc>::from_naive_utc_and_offset(
             date.and_time(NaiveTime::from_hms_milli_opt(0, 0, 0, 0).unwrap()),

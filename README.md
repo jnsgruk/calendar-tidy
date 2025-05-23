@@ -10,16 +10,16 @@ patterns in the configuration file.
 
 ```
 # Delete 5 days of events using default config/token location.
-calendar-tidy --start-date "21/07/2025"
+calendar-tidy --start-date "2025/07/25"
 
 # Delete 2 days of events using default config/token location.
-calendar-tidy -s "21/07/2025" -d 2
+calendar-tidy -s "2025/07/25" -d 2
 
 # Delete events for a single day using specific token/config file.
 calendar-tidy \
   --config-file ~/temp/calendar-tidy.yaml \
   --credentials ~/temp/creds.json \
-  --start-date "28/07/2025" \
+  --start-date "2025/07/25" \
   --days 1
 ```
 
@@ -41,7 +41,7 @@ Usage: calendar-tidy [OPTIONS] --start-date <START_DATE>
 
 Options:
   -s, --start-date <START_DATE>
-          Date to starting clearing from in the format DD/MM/YYYY
+          Date to starting clearing from in the format YYYY/MM/DD
 
   -d, --days <DAYS>
           Number of days to clear from the start date
