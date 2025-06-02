@@ -52,7 +52,7 @@ jobs:
           fi
 
       - name: Setup LXD
-        uses: canonical/setup-lxd@v0.1.2
+        uses: canonical/setup-lxd@v0.1.3
 
       - name: Setup Snapcraft
         run: sudo snap install --classic snapcraft
