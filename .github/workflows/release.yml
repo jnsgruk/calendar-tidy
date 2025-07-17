@@ -31,6 +31,8 @@ jobs:
 
   snap:
     name: Release snap
+    needs:
+      - test
     strategy:
       matrix:
         include:
