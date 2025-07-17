@@ -1,5 +1,7 @@
 # calendar-tidy
 
+<a href="https://snapcraft.io/calendar-tidy"><img alt="calendar-tidy" src="https://snapcraft.io/calendar-tidy/badge.svg"/></a>
+
 A utility for bulk deleting events from a Google Calendar within a given date range, according
 to some (optional) filters.
 
@@ -26,7 +28,13 @@ calendar-tidy \
 
 ## Installation
 
-You can install `calendar-tidy` with Cargo:
+You can install `calendar-tidy` as a Snap:
+
+```bash
+sudo snap install calendar-tidy
+```
+
+Or with Cargo:
 
 ```bash
 cargo install --git https://github.com/jnsgruk/calendar-tidy
