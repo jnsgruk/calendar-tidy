@@ -6,7 +6,7 @@ edition = "2024"
 [dependencies]
 anyhow = "1.0.93"
 chrono = "0.4.38"
-clap = { version = "4.5.40", features = ["derive"] }
+clap = { version = "4.5.42", features = ["derive"] }
 cli-table = "0.5.0"
 confy = { version = "0.6.1", features = [
     "yaml_conf",
@@ -16,5 +16,5 @@ inquire = "0.7.5"
 regex = "1.11.1"
 serde = { version = "1", features = ["derive"] }
 serde_regex = "1.1.0"
-tokio = { version = "1.45", features = ["full"] }
+tokio = { version = "1.47", features = ["full"] }
 xdg = "2.5.2"
