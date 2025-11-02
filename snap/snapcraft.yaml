@@ -38,3 +38,10 @@ apps:
       - home
       - network
       - network-bind
+      - dot-config-calendar-tidy
+
+plugs:
+  dot-config-calendar-tidy:
+    interface: personal-files
+    write:
+      - $HOME/.config/calendar-tidy
