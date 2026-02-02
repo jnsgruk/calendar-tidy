@@ -74,10 +74,12 @@
             NIX_CONFIG = "experimental-features = nix-command flakes";
             RUST_SRC_PATH = "${rust}/lib/rustlib/src/rust/library";
 
-            inputsFrom = [ self.packages.${system}.calendar-tidy ];
             buildInputs = [
               rust
-            ];
+            ] ++ (with pkgs; [
+              nil
+              nixfmt
+            ]);
           };
         }
       );
