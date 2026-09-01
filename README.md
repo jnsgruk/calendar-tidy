@@ -99,11 +99,9 @@ reauthorising.
 [desktop OAuth app]: https://developers.google.com/workspace/guides/create-credentials#desktop-app
 [Google Calendar API]: https://developers.google.com/calendar/api/guides/overview
 
-## Building `calendar-tidy`.
+## Building `calendar-tidy`
 
 ```bash
-# With nix
-nix run .#calendar-tidy
-# With cargo
+mise install
 cargo build
 ```

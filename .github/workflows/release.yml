@@ -18,16 +18,14 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Install nix
-        uses: DeterminateSystems/nix-installer-action@main
+      - name: Install toolchain
+        uses: jdx/mise-action@v4
 
       - name: Build calendar-tidy
-        run: |
-          nix build .#calendar-tidy
+        run: cargo build --locked
 
       - name: Run tests
-        run: |
-          nix develop --command cargo test -- --show-output
+        run: cargo test --locked -- --show-output
 
   snap:
     name: Release snap
